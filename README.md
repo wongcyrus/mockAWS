@@ -1,5 +1,5 @@
 #Mock AWS
-Mock AWS is docker-compose project template that simulate 3 common services in AWS serverless architecture: Lambda, DynamoDB, and S3. And, our use case is mainly for students to try and learn how to use node.js to build serverless services, but it can be extended for your local lambda code development or testing. 
+Mock AWS is docker-compose project template that simulates 3 common services in AWS serverless architecture: Lambda, DynamoDB, and S3. And, our use case is mainly for students to try and learn how to use node.js to build serverless services, but it can be extended for your local lambda code development or testing. 
 
 
 ##Start Mock AWS Environment
