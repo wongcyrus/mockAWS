@@ -17,6 +17,7 @@ Go to http://localhost:8000/shell/ to inspect the result.
 
 
 You can check created table with
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 var params = {};
@@ -27,9 +28,11 @@ dynamodb.listTables(params, function(err, data) {
         console.log(JSON.stringify(data, null, 2));
 });
 
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 You can check the data in Music table
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 var params = {
@@ -47,15 +50,19 @@ dynamodb.query(params, function(err, data) {
         console.log(JSON.stringify(data, null, 2));
 });
 
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 You can check S3 folder for the files.
 
 ##Stop Mock AWS Environment
 Stop the cluster
+
 Ctrl + C
+
 docker-compose down
 
 ##Cleanup
+
 Delete S3 and DB folders.
 
