@@ -1,0 +1,24 @@
+{
+  "name": "mockawslambda",
+  "version": "1.0.0",
+  "description": "Mocking AWS Lambda environments code template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "Mock"
+  ],
+  "author": "Cyrus Wong",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "latest"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-pack": "0.1.*",
+    "grunt-aws-lambda": "^0.13.0"
+  }
+}

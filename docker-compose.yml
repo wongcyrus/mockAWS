@@ -1,0 +1,45 @@
+version: '2'
+services:
+  lambda:
+    container_name: lambda
+    image: lambci/lambda
+    volumes:
+       - .:/var/task
+    depends_on:
+      - preprocessing
+    links:
+      - "dynamodb:dynamodb"
+      - "s3:s3"
+  dynamodb:
+    container_name: dynamodb
+    image: ryanratcliff/dynamodb
+    expose:
+     - "8000"
+    ports:
+     - "8000:8000"
+    volumes:
+     - ./db:/var/dynamodb_data
+  s3:
+    container_name: s3
+    image: lphoward/fake-s3
+    expose:
+     - "4569"
+    ports:
+     - "4569:4569"
+    volumes:
+     - ./s3:/fakes3_root
+  preprocessing:
+     build: .
+     depends_on:
+       - dynamodb
+       - s3
+     volumes:
+       - .:/code
+     links:
+       - "dynamodb:dynamodb"
+       - "s3:s3"
+volumes:
+    dynamodb:
+    s3:
+
+       
